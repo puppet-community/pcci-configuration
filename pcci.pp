@@ -54,9 +54,9 @@ vcsrepo { '/root/pcci-configuration':
 
 include 'archive'
 
-archive { '/opt/vagrant_1.7.2_x86_64.deb':
+archive { '/opt/vagrant_1.6.5_x86_64.deb':
   ensure        => present,
-  source   => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb',
+  source   => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb',
   checksum      => '68f0821b5a8feb5968593125bdc2d8e4e458c2b1',
   checksum_type => 'sha1',
 } ->
@@ -64,7 +64,7 @@ archive { '/opt/vagrant_1.7.2_x86_64.deb':
 package { 'vagrant':
   ensure   => present,
   provider => 'dpkg',
-  source   => '/opt/vagrant_1.7.2_x86_64.deb',
+  source   => '/opt/vagrant_1.6.5_x86_64.deb',
 }
 
 file { '/etc/puppet/hiera.yaml':
