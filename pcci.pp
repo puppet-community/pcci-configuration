@@ -1,16 +1,17 @@
 
 $packages = [
-  'python-pip',
-  'libxslt-dev',
   'bundler',
-  'zlib1g-dev',
+  'git',
+  'htop',
+  'libxslt-dev',
+  'puppet',
+  'python-pip',
   'python-virtualenv',
-  'virtualbox',
   'ruby-dev',
   'tmux',
   'vim',
-  'git',
-  'puppet',
+  'virtualbox',
+  'zlib1g-dev',
 ]
 
 package { $packages:
