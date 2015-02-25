@@ -1,6 +1,7 @@
 
 $packages = [
   'python-pip',
+  'libxslt-dev',
   'bundler',
   'python-virtualenv',
   'virtualbox',
