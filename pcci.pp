@@ -1,6 +1,7 @@
 
 $packages = [
   'python-pip',
+  'python-virtualenv',
   'virtualbox',
   'ruby-dev',
   'tmux',
@@ -12,7 +13,6 @@ $packages = [
 package { $packages:
   ensure => latest,
 }
-
 
 user { 'pcci':
   ensure     => present,
