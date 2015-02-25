@@ -23,7 +23,6 @@ file { '/home/pcci/.ssh':
 
 include admins
 
-
 vcsrepo { '/opt/pcci':
   ensure   => latest,
   provider => git,

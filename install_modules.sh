@@ -5,6 +5,8 @@ if ! [ -x /usr/bin/puppet ]; then
     exit 1
 fi
 
+declare -A SOURCE_MODULES
+
 SCRIPT_NAME=$(basename $0)
 SCRIPT_DIR=$(readlink -f "$(dirname $0)")
 
@@ -34,7 +36,6 @@ function remove_module {
 }
 
 
-declare -A SOURCE_MODULES
 
 
 MODULE_LIST=`puppet module list`
