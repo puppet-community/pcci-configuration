@@ -26,6 +26,12 @@ file { '/home/pcci/.ssh':
   mode   => '0700',
 }
 
+file { '/home/pcci/.hushlogin':
+  ensure => file,
+  owner  => 'pcci',
+  mode   => '0644',
+}
+
 include 'admins'
 
 vcsrepo { '/opt/pcci':
