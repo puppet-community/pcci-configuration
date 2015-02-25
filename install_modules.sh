@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! [ -x /usr/bin/puppet]; then
+if ! [ -x /usr/bin/puppet ]; then
     echo "puppet not found"
     exit 1
 fi
