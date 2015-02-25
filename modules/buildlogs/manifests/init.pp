@@ -15,11 +15,12 @@ class buildlogs () {
   }
 
   httpd::vhost { 'planck.nibalizer.com':
-    port     => 80, 
-    priority => '50',
-    docroot  => '/srv/static/logs',
-    require  => File['/srv/static/logs'],
-    template => 'buildlogs/buildlogs.vhost.erb',
+    port               => 80, 
+    priority           => '50',
+    docroot            => '/srv/static/logs',
+    require            => File['/srv/static/logs'],
+    template           => 'buildlogs/buildlogs.vhost.erb',
+    configure_firewall => false,
   }
 
 
