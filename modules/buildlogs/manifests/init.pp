@@ -15,7 +15,7 @@ class buildlogs () {
   }
 
   httpd::vhost { 'planck.nibalizer.com':
-    port               => 80, 
+    port               => 8080, 
     priority           => '50',
     docroot            => '/srv/static/logs',
     require            => File['/srv/static/logs'],
