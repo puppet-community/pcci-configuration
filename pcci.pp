@@ -71,3 +71,6 @@ file { '/etc/puppet/hiera.yaml':
 class { 'redis':
   redis_bind_address => '127.0.0.1',
 }
+
+include buildlogs
+
