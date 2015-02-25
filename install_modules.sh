@@ -6,6 +6,7 @@ if ! [ -x /usr/bin/puppet ]; then
 fi
 
 declare -A SOURCE_MODULES
+MODULE_PATH="/etc/puppet/modules"
 
 SCRIPT_NAME=$(basename $0)
 SCRIPT_DIR=$(readlink -f "$(dirname $0)")
