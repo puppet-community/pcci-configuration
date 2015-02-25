@@ -41,9 +41,13 @@ vcsrepo { '/root/pcci-configuration':
   source   => 'https://github.com/nibalizer/pcci-configuration.git',
 }
 
+include 'archive'
 
-staging::file { '/opt/vagrant_1.7.2_x86_64.deb':
+archive { '/opt/vagrant_1.7.2_x86_64.deb':
+  ensure        => present,
   source   => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb',
+  checksum      => '68f0821b5a8feb5968593125bdc2d8e4e458c2b1',
+  checksum_type => 'sha1',
 } ->
 
 package { 'vagrant':
