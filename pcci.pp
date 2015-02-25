@@ -16,6 +16,7 @@ package { $packages:
 
 user { 'pcci':
   ensure     => present,
+  shell      => '/bin/bash',
   managehome => true,
 } ->
 
