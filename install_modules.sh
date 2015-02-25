@@ -14,7 +14,7 @@ if [ -f "${MODULE_ENV_PATH}/${MODULE_ENV_FILE}" ] ; then
     . "${MODULE_ENV_PATH}/${MODULE_ENV_FILE}"
 fi
 
-if [ -z "${!MODULES[*]}" ] && [ -z "${!SOURCE_MODULES[*]}" ] ; then
+if [ -z "${!SOURCE_MODULES[*]}" ] ; then
     echo ""
     echo "WARNING: nothing to do, unable to find MODULES or SOURCE_MODULES"
     echo "  export options, try setting MODULE_ENV_PATH or MODULE_ENV_FILE"
