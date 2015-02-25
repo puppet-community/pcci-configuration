@@ -23,9 +23,9 @@ file { '/home/pcci/.ssh':
   ensure => directory,
   owner  => 'pcci',
   mode   => '0700',
-} ->
+}
 
-include admins
+include 'admins'
 
 vcsrepo { '/opt/pcci':
   ensure   => latest,
