@@ -57,7 +57,7 @@ include 'archive'
 archive { '/opt/vagrant_1.6.5_x86_64.deb':
   ensure        => present,
   source   => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.5_x86_64.deb',
-  checksum      => '68f0821b5a8feb5968593125bdc2d8e4e458c2b1',
+  checksum      => '4989d576565cb4a0fccda2e5a08d48bb859a3955',
   checksum_type => 'sha1',
 } ->
 
