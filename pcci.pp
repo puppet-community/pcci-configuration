@@ -52,6 +52,9 @@ package { 'vagrant':
   source   => '/opt/vagrant_1.7.2_x86_64.deb',
 }
 
+file { '/etc/puppet/hiera.yaml':
+  ensure => file,
+}
 
 class { 'redis':
   redis_bind_address => '127.0.0.1',
