@@ -50,5 +50,5 @@ package { 'vagrant':
 
 
 class { 'redis':
-  bind_address => '127.0.0.1',
+  redis_bind_address => '127.0.0.1',
 }
