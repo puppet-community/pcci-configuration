@@ -1,6 +1,6 @@
 
 $packages = [
-  'pip',
+  'python-pip',
   'virtualbox',
   'ruby-dev',
   'tmux',
