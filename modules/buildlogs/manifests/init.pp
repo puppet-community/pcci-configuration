@@ -19,7 +19,7 @@ class buildlogs () {
     priority => '50',
     docroot  => '/srv/static/logs',
     require  => File['/srv/static/logs'],
-    template => 'openstack_project/logs.vhost.erb',
+    template => 'buildlogs/buildlogs.vhost.erb',
   }
 
 
