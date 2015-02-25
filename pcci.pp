@@ -3,6 +3,10 @@ $packages = [
   'pip',
   'virtualbox',
   'ruby-dev',
+  'tmux',
+  'vim',
+  'git',
+  'puppet',
 ]
 
 package { $packages:
