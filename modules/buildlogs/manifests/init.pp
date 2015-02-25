@@ -2,13 +2,7 @@ class buildlogs () {
 
   include httpd
 
-  file { '/srv/static':
-    ensure => directory,
-    owner  => 'root',
-    mode   => '0755',
-  }
-
-  file { '/srv/static/logs':
+  file { '/var/www/html/buildlogs':
     ensure => directory,
     owner  => 'root',
     mode   => '0755',
@@ -17,8 +11,8 @@ class buildlogs () {
   httpd::vhost { 'planck.nibalizer.com':
     port               => 8080, 
     priority           => '50',
-    docroot            => '/srv/static/logs',
-    require            => File['/srv/static/logs'],
+    docroot            => '/var/www/html',
+    require            => File['/var/www/html/buildlogs'],
     template           => 'buildlogs/buildlogs.vhost.erb',
     configure_firewall => false,
   }
