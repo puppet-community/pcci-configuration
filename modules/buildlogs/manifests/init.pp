@@ -4,13 +4,13 @@ class buildlogs () {
 
   file { '/srv/static':
     ensure => directory,
-    owner  => 'www-data',
+    owner  => 'root',
     mode   => '0755',
   }
 
   file { '/srv/static/logs':
     ensure => directory,
-    owner  => 'www-data',
+    owner  => 'root',
     mode   => '0755',
   }
 
