@@ -4,7 +4,7 @@ class buildlogs () {
 
   file { '/var/www/html/buildlogs':
     ensure => directory,
-    owner  => 'root',
+    owner  => 'pcci',
     mode   => '0755',
   }
 
