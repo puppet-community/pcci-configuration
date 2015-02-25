@@ -42,10 +42,14 @@ vcsrepo { '/root/pcci-configuration':
 }
 
 
+staging::file { '/opt/vagrant_1.7.2_x86_64.deb':
+  source   => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb',
+} ->
+
 package { 'vagrant':
   ensure   => present,
   provider => 'dpkg',
-  source   => 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb',
+  source   => '/opt/vagrant_1.7.2_x86_64.deb',
 }
 
 
