@@ -1,6 +1,7 @@
 
 $packages = [
   'python-pip',
+  'bundler',
   'python-virtualenv',
   'virtualbox',
   'ruby-dev',
