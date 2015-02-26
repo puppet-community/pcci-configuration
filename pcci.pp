@@ -77,3 +77,9 @@ class { 'redis':
 
 include buildlogs
 
+class { 'ssh::server':
+  options => {
+    'PasswordAuthentication' => 'no',
+    'PermitRootLogin'        => 'without-password',
+  },
+}
