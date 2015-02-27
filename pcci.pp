@@ -42,14 +42,14 @@ vcsrepo { '/opt/pcci':
   ensure   => latest,
   provider => git,
   revision => 'master',
-  source   => 'https://github.com/nibalizer/pcci.git',
+  source   => 'https://github.com/puppet-community/pcci.git',
 }
 
 vcsrepo { '/root/pcci-configuration':
   ensure   => latest,
   provider => git,
   revision => 'master',
-  source   => 'https://github.com/nibalizer/pcci-configuration.git',
+  source   => 'https://github.com/puppet-community/pcci-configuration.git',
 }
 
 include 'archive'
