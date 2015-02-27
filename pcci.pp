@@ -76,6 +76,7 @@ class { 'redis':
 }
 
 include buildlogs
+include pcci
 
 class { 'ssh::server':
   options => {
