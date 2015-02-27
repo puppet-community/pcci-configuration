@@ -68,7 +68,8 @@ package { 'vagrant':
 }
 
 file { '/etc/puppet/hiera.yaml':
-  ensure => file,
+  ensure => link,
+  target => '/etc/hiera.yaml',
 }
 
 class { 'redis':
