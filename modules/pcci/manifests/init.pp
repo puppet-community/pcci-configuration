@@ -8,4 +8,10 @@ class pcci (
     mode    => '0644',
   }
 
+  file { '/home/pcci/run_workers.sh':
+    ensure  => file,
+    content => template('pcci/run_workers.sh.erb'),
+    mode    => '0755',
+  }
+
 }
