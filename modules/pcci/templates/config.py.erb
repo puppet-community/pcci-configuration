@@ -1,12 +1,11 @@
 password = "<%= @github_password %>"
 workers = 12
-logpath = '/tmp/'
-rooturl = 'http://planck.nibalizer.com:8080/buildlogs/'
+logpath = '/var/www/html/buildlogs/'
+rooturl = 'http://planck.nibalizer.com/buildlogs/'
 commentable = ['test']
 build_todo_aggressively = True
 
-repos = ['puppet-community-ci/test',
-         'puppetlabs/puppetlabs-rabbitmq',
+repos = ['puppetlabs/puppetlabs-rabbitmq',
          'puppetlabs/puppetlabs-apt',
          'puppetlabs/puppetlabs-concat',
          'puppetlabs/puppetlabs-inifile',
