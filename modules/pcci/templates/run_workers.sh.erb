@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# for i in {0..8}; do echo $i ;sleep 2;  ./run_worker.sh & done
+
+source venv/bin/activate
+while true
+do
+    cd pcci
+    python worker.py |& logger -t pcci-worker-$$
+    sleep 30
+    cd ..
+
+done
+
