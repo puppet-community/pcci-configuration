@@ -1,0 +1,10 @@
+#!/bin/bash
+
+num_workers1=`ps -ef | grep -c worker.py `
+sleep 120
+num_workers2=`ps -ef | grep -c worker.py`
+avg_workers=`echo \($num_workers1 + $num_workers2\)  / 2 | bc`
+echo "found average workers to be $avg_workers"
+echo "set workers in redis is" `redis-cli get workers`
+redis-cli set workers $avg_workers
+
