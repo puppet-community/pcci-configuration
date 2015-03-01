@@ -79,7 +79,7 @@ class { 'redis':
 include buildlogs
 
 class { 'pcci':
-  worker_count => 36,
+  worker_count => 28,
 }
 
 class { 'ssh::server':
