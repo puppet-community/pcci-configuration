@@ -1,4 +1,5 @@
 class pcci (
+  $worker_count    = 12,
   $github_password = hiera('github_password'),
 ) {
 
