@@ -32,7 +32,7 @@ class buildlogs () {
 
   $swift_authurl  = ""
 
-  package { 'httpd-wsgi':
+  package { 'libapache2-mod-wsgi':
     ensure   => 'latest',
   }
 
