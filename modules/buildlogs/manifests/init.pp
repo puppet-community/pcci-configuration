@@ -32,6 +32,10 @@ class buildlogs () {
 
   $swift_authurl  = ""
 
+  package { 'httpd-wsgi':
+    ensure   => 'latest',
+  }
+
   package { 'keyring':
     ensure   => 'latest',
     provider => 'pip',
