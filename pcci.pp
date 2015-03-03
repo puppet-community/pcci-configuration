@@ -91,6 +91,8 @@ class { 'ssh::server':
 
 include docker
 
+$swift_authurl  = ""
+
 package { 'keyring':
   ensure   => 'latest',
   provider => 'pip',
