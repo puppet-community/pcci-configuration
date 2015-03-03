@@ -6,6 +6,7 @@ $packages = [
   'libxslt-dev',
   'puppet',
   'python-pip',
+  'python-dev',
   'python-virtualenv',
   'ruby-dev',
   'tmux',
