@@ -23,6 +23,9 @@ class buildlogs () {
   httpd_mod { 'proxy':
     ensure => present,
   }
+  httpd_mod { 'wsgi':
+    ensure => present,
+  }
   httpd_mod { 'proxy_http':
     ensure => present,
   }
