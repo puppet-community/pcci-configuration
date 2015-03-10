@@ -1,14 +1,17 @@
 
 $packages = [
   'bundler',
+  'debootstrap',
   'git',
   'htop',
   'libxslt-dev',
+  'libyaml-dev',
   'puppet',
   'python-pip',
   'python-dev',
   'python-virtualenv',
   'ruby-dev',
+  'qemu-utils',
   'tmux',
   'vim',
   'virtualbox',
