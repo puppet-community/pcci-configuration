@@ -4,6 +4,7 @@ $packages = [
   'debootstrap',
   'git',
   'htop',
+  'qemu-kvm',
   'cpu-checker',
   'libxslt-dev',
   'libyaml-dev',
