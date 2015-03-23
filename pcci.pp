@@ -4,6 +4,7 @@ $packages = [
   'debootstrap',
   'git',
   'htop',
+  'cpu-checker',
   'libxslt-dev',
   'libyaml-dev',
   'puppet',
