@@ -1,6 +1,7 @@
 class buildlogs () {
 
   include httpd
+  include buildlogs::pcciweb
 
   file { '/var/www/html/buildlogs':
     ensure => directory,
