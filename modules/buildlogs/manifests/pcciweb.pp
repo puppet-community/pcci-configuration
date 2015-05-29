@@ -26,7 +26,7 @@ class buildlogs::pcciweb (
     require      => Vcsrepo['/www/pcciweb/pcciweb'],
   } ->
 
-  python::requirements { 'www/pcciweb/pcciweb/requirements.txt' :
+  python::requirements { '/www/pcciweb/pcciweb/requirements.txt' :
     virtualenv => '/www/pcciweb/pcciweb/venv',
     owner      => 'www-data',
     group      => 'www-data',
