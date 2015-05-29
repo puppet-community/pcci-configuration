@@ -94,6 +94,3 @@ class { 'ssh::server':
     'PermitRootLogin'        => 'without-password',
   },
 }
-
-include docker
-
