@@ -8,8 +8,8 @@ class buildlogs () {
     mode   => '0755',
   }
 
-  httpd::vhost { 'planck.nibalizer.com':
-    port               => 80, 
+  httpd::vhost { 'ci.puppet.community':
+    port               => 80,
     priority           => '50',
     docroot            => '/var/www/html',
     require            => File['/var/www/html/buildlogs'],
