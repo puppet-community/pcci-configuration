@@ -2,8 +2,11 @@ password = "<%= @github_password %>"
 workers = <%= @worker_count %>
 logpath = '/var/www/html/buildlogs/'
 rooturl = 'http://planck.nibalizer.com/buildlogs/'
-commentable = ['test']
-build_todo_aggressively = True
+commentable = ['puppetlabs-rabbitmq',
+               'puppetlabs-inifile',
+               'puppetlabs-stdlib',
+               'puppetlabs-postgresql' ]
+build_todo_aggressively = False
 
 repos = ['puppetlabs/puppetlabs-rabbitmq',
          'puppetlabs/puppetlabs-apt',
