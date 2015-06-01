@@ -16,6 +16,7 @@ class buildlogs::pcciweb (
     owner    => 'www-data',
     source   => 'https://github.com/puppet-community/pcci',
     revision => 'master',
+    notify   => Service['apache2'],
   } ->
 
   python::virtualenv { '/www/pcciweb/pcciweb/venv':
