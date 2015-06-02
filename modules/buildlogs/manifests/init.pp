@@ -40,4 +40,12 @@ class buildlogs () {
     provider => 'pip',
   }
 
+  cron { 'clean old logs':
+    command => 'find /var/www/html/buildlogs -type f -mtime +30 -delete >/dev/null 2>&1',
+    user    => 'pcci',
+    group   => 'pcci',
+    minute  => 0,
+    hour    => 0,
+  }
+
 }
