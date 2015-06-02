@@ -35,4 +35,11 @@ class admins (){
     key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDN5fRoSulsSY0YZ9wJnAACji826Dw4Tx4/RAGBGff9tQBsvrPYYSTAzzAv6Yydz7w/YlM503oYMCjfT6/LZxIt8AMrehfJ5iiGBBsN7Mpa3w3CTcrKIlozoHKInodC8wO2944PH+Y5V9K1vSx9eVhCK1pC3KiQ3fOJ3wNK27jb4m82eWRdWK5XMNIL0tlHAT4fHCqd+TjFyRKAE5Q2dnElLg+sRT4oDNtdzwXy6phIxJwo0qjTmWgVk1kSWv1/+HGGwmrVf6B1O8Eqk34WEYnLCs/bdxQBXwJ2IzQvPCofAyPTXy8HtUrXcyv3uV9UaVjc3MC3iIqELhB1r4FT1Q5v',
   }
 
+  ssh_authorized_key { 'igalic@levix':
+    ensure => present,
+    user   => 'pcci',
+    type   => 'ssh-rsa',
+    key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDn+f8KdN2I/YBNPbKuNvUnrqBcfYXSay/Pt8ijnN/YsUTIAPC0UDDjpTvAWgcvVcoujATE2wb2ut4BUiHfMBneyPeSrhUclOa9x2ruwG7Ys1K/zfIdXhYz+T/4YGyZtOFZFzqHUICW78zhy//8NXRY5RDI0x8cNA/y3e2NcE5hsBNJLYyq1pDn52+4Mq+0ay44iN+1wJV6rbpvK+4chbqGXQ4B79jgKke1qe2m4O4Y7Yq8+x/oQsVSKxpZRXzY9+cGb2+za6ZsyaIYhDtISKg3qAEDU3Uddiu6MNS2jOhzdK75+OCYFXWzdlPKgdW/ibY+N78jwO3LbeGWv0veWRJh',
+  }
+
 }
