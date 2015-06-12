@@ -1,6 +1,7 @@
 class pcci (
-  $worker_count    = 12,
-  $github_password = hiera('github_password'),
+  $worker_count      = 12,
+  $github_password   = hiera('github_password'),
+  $github_auth_token = hiera('github_auth_token'),
 ) {
 
   file { '/home/pcci/pcci/config.py':
