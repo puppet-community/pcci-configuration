@@ -2,12 +2,13 @@ password = "<%= @github_password %>"
 workers = <%= @worker_count %>
 logpath = '/var/www/html/buildlogs/'
 rooturl = 'http://ci.puppet.community/buildlogs/'
-commentable = ['puppetlabs-rabbitmq',
-               'puppetlabs-inifile',
-               'puppetlabs-stdlib',
-               'puppet-stash',
-               'puppetlabs-postgresql' ]
 build_todo_aggressively = False
+pccibottoken = "<%= @github_auth_token %>"
+commentable = ['puppet-corosync',
+               'puppet-nodejs',
+               'puppet-module-puppetboard',
+               'puppet-stash' ]
+
 
 repos = [ 'genome/nnutter-perlbrew',
           'jbussdieker/puppet-carbon',
