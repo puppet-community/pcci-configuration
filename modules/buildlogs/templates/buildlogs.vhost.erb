@@ -23,6 +23,15 @@ NameVirtualHost <%= @vhost_name %>:<%= @port %>
     allow from all
   </Directory>
 
+  Alias /images /home/pcci/srv
+  <Directory /home/pcci/srv>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Satisfy Any
+    allow from all
+  </Directory>
+
   <Directory /www/pcciweb/pcciweb >
     WSGIProcessGroup pcciweb
     WSGIApplicationGroup %{GLOBAL}
