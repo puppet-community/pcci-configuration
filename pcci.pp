@@ -94,3 +94,16 @@ class { 'ssh::server':
     'PermitRootLogin'        => 'without-password',
   },
 }
+
+class { '::ntp':
+  servers   => ['3.pool.ntp.org', '2.us.pool.ntp.org', '0.de.pool.ntp.org'],
+  restrict  => [
+    'default ignore',
+    '-6 default ignore',
+    '127.0.0.1',
+    '-6 ::1',
+    '3.pool.ntp.org nomodify notrap nopeer noquery',
+    '2.us.pool.ntp.org nomodify notrap nopeer noquery',
+    '0.de.pool.ntp.org nomodify notrap nopeer noquery',
+  ],
+}
