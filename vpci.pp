@@ -14,7 +14,6 @@ file { '/etc/nodepool/nodepool.yaml':
   require => [
     File['/etc/nodepool'],
     User['nodepool'],
-    Class['project_config'],
   ],
 }
 
@@ -55,6 +54,9 @@ file { '/home/nodepool/.ssh/id_rsa.pub':
   group   => 'nodepool',
   mode    => '0400',
   content => hiera('nodepool_ssh_public_key'),
+  require => [
+    Class['nodepool'],
+  ],
 }
 
 
