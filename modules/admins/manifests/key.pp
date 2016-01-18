@@ -7,7 +7,7 @@ define admins::key (
     $ensure = 'present',
     $type   = 'ssh-rsa',
 ) {
-  
+
   ssh_authorized_key { "${title}-pcci":
     ensure => $ensure,
     user   => 'pcci',
