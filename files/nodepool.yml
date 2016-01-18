@@ -1,0 +1,57 @@
+script-dir: /etc/nodepool/scripts
+elements-dir: /etc/nodepool/elements
+images-dir: /opt/nodepool_dib
+
+cron:
+  cleanup: '*/1 * * * *'
+  check: '*/15 * * * *'
+# TODO: Please choose a random hour for nodepool image updates.
+# This will help reduce the load on upstream git farms & mirros where all 3rd
+# party ci systems start building images at the same time.
+# Doing so is easy, run the following command and replace image-update string
+# with the results:
+#   echo "0 $((RANDOM%23+1)) * * *"
+# Example:
+#   root@jenkins:~# echo "0 $((RANDOM%23+1)) * * *"
+#   0 16 * * *
+# This references the hour of the day when images will be built.
+  image-update: '0 7 * * *'
+
+zmq-publishers: []
+
+
+labels:
+  - name: ubuntu-trusty
+    image: trusty
+    min-ready: 1
+    providers:
+      - name: local_01
+
+diskimages:
+    - name: trusty
+      elements:
+        - ubuntu
+        - vm
+        - openstack-repos
+        - puppet
+        - nodepool-base
+        - node-devstack
+      release: trusty
+      env-vars:
+        TMPDIR: /opt/dib_tmp
+        DIB_IMAGE_CACHE: /opt/dib_cache
+
+providers:
+  - name: yolocloud
+#TODO: Update the provider username, password, and authurl
+    max-servers: 2
+    images:
+      - name: dpc
+        min-ram: 2048
+        diskimage: dpc
+        username: jenkins
+        private-key: '/home/nodepool/.ssh/id_rsa'
+
+targets:
+  - name: dummy
+
