@@ -1,7 +1,8 @@
 class pcci (
-  $worker_count      = 12,
-  $github_password   = hiera('github_password'),
-  $github_auth_token = hiera('github_auth_token'),
+  $worker_count        = 12,
+  $github_password     = hiera('github_password'),
+  $github_auth_token   = hiera('github_auth_token'),
+  $pcci_retention_days = 30,
 ) {
 
   file { '/home/pcci/pcci/config.py':
@@ -22,4 +23,17 @@ class pcci (
     mode    => '0755',
   }
 
+  # Clean up the aged out PCCI jobs and images to prevent the disk from overflowing.
+  cron { 'pcci_job_cleanup':
+    command => "/usr/bin/find /tmp -maxdepth 1 -type d -user pcci -mtime +${pcci_retention_days} -name \"pcci*\" -exec rm -fR {} \;",
+    user    => root,
+    hour    => 1,
+    minute  => 0,
+  }
+  cron { 'pcci_image_cleanup':
+    command => "/usr/bin/find /tmp -maxdepth 1 -type f -user root -mtime +${pcci_retention_days} -exec rm -fR {} \;",
+    user    => root,
+    hour    => 2,
+    minute  => 0,
+  }
 }
