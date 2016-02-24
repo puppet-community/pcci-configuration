@@ -24,4 +24,8 @@ class admins (){
     ensure => present,
     key    => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDn+f8KdN2I/YBNPbKuNvUnrqBcfYXSay/Pt8ijnN/YsUTIAPC0UDDjpTvAWgcvVcoujATE2wb2ut4BUiHfMBneyPeSrhUclOa9x2ruwG7Ys1K/zfIdXhYz+T/4YGyZtOFZFzqHUICW78zhy//8NXRY5RDI0x8cNA/y3e2NcE5hsBNJLYyq1pDn52+4Mq+0ay44iN+1wJV6rbpvK+4chbqGXQ4B79jgKke1qe2m4O4Y7Yq8+x/oQsVSKxpZRXzY9+cGb2+za6ZsyaIYhDtISKg3qAEDU3Uddiu6MNS2jOhzdK75+OCYFXWzdlPKgdW/ibY+N78jwO3LbeGWv0veWRJh',
   }
+  
+  admins::key { 'rnelson0@putty':
+    ensure => present,
+    key    => 'AAAAB3NzaC1yc2EAAAABJQAAAQEAkMG+tK6opU8uqOTdn1CdKPRRT9nWyqLzow7whCu75jKBZKUrj1l6gMQIR9MVjeWh5W3Wd6HyAOj1eJ7Fb+RYsdrsiqB8nZDNSFdE7rZ8DuGbHXABOkhdx2UwcwgIygQUsRzETqhfn6k2c9rkgVN3OQ/eID9EP4c9UoVWPs9fD7xJ2020xsd3aa7Iwr19w+Yr6St9UNQFV3b5OmTKxPXygMhy4jJYO4CPNYqmgmta9pjk2aTl655X1xQR6VC7xPMjjcRKBvdFqmsXlDXnQ51KR1HcSkoOVJNSMCk+nFvJG337808WHHUivh0cC9KXozAvUScoPZHKIayeuPGv2NmxKQ==',
 }
