@@ -31,7 +31,7 @@ class pcci (
     minute  => 0,
   }
   cron { 'pcci_image_cleanup':
-    command => "/usr/bin/find /tmp -maxdepth 1 -type f -user root -mtime +${pcci_retention_days} -exec rm -fR {} \;",
+    command => "/usr/bin/find /tmp -maxdepth 1 -type f -user root -mtime +${pcci_retention_days} -exec rm -f {} \;",
     user    => root,
     hour    => 2,
     minute  => 0,
