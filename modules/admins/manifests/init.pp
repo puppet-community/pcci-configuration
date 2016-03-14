@@ -34,5 +34,9 @@ class admins (){
     ensure => present,
     key    => 'AAAAB3NzaC1yc2EAAAABJQAAAQEAkMG+tK6opU8uqOTdn1CdKPRRT9nWyqLzow7whCu75jKBZKUrj1l6gMQIR9MVjeWh5W3Wd6HyAOj1eJ7Fb+RYsdrsiqB8nZDNSFdE7rZ8DuGbHXABOkhdx2UwcwgIygQUsRzETqhfn6k2c9rkgVN3OQ/eID9EP4c9UoVWPs9fD7xJ2020xsd3aa7Iwr19w+Yr6St9UNQFV3b5OmTKxPXygMhy4jJYO4CPNYqmgmta9pjk2aTl655X1xQR6VC7xPMjjcRKBvdFqmsXlDXnQ51KR1HcSkoOVJNSMCk+nFvJG337808WHHUivh0cC9KXozAvUScoPZHKIayeuPGv2NmxKQ==',
   }
+  admins::key { 'bkero@puppet-community':
+    ensure => present,
+    key    => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA0m7hau2lgz8IiFPQl+RfVO4jAgnVQLW2CKQxsq7qRfPlhjRUbU7mCKBMq0DS/GyK/SJvE0L8QefopFvlyfbzXi5kbHlUprFeTGtQkvF/XotRNAx6hcbVdClbqyy3JwcQBc/jFkfBuy2mdTEVCINKQorngvosRCM7CtnpSUMGcw9K5Rr48kkB+UtgJOLkraZ6QyngmUtm3nRnL8uk4tfKw3DZbBe/eXzCvNVd/fYAKpeoIAgRwPj4jmPLuly+Y5IipxizsWgVAGjeAC3p3ybHqXORBu2S+u2kV8sLoBQkrWZETX+QGv0gRzXv7IFINhNv9+2sgHOmumbSDnNzvfNZaw==',
+  }
 }
 
