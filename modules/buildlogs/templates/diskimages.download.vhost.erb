@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+  ServerName diskimages.download
+
+  Alias / /var/www/html/diskimages
+  <Directory /var/www/html/diskimages>
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Satisfy Any
+    allow from all
+  </Directory>
+</VirtualHost>

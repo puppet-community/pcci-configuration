@@ -10,11 +10,21 @@ class buildlogs () {
   }
 
   httpd::vhost { 'ci.puppet.community':
+    vhost_name         => '*',
     port               => 80,
     priority           => '50',
     docroot            => '/var/www/html',
     require            => File['/var/www/html/buildlogs'],
     template           => 'buildlogs/buildlogs.vhost.erb',
+    configure_firewall => false,
+  }
+
+  httpd::vhost { 'diskimages.download':
+    vhost_name         => '*',
+    port               => 80,
+    priority           => '50',
+    docroot            => '/var/www/html/diskimages',
+    template           => 'buildlogs/diskimages.download',
     configure_firewall => false,
   }
 
